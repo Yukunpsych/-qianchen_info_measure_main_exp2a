@@ -1,0 +1,12 @@
+1.3157 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+7.5743 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f84492617c0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f841752b4c0>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.5746 	EXP 	window1: mouseVisible = True
+7.5756 	EXP 	window1: mouseVisible = False
+7.5756 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.5757 	EXP 	window1: recordFrameIntervals = False
+7.7402 	EXP 	window1: recordFrameIntervals = True
+7.9242 	EXP 	Screen (0) actual frame rate measured at 59.91Hz
+7.9243 	EXP 	window1: recordFrameIntervals = False
+10.6584 	EXP 	Created consent_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='consent_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.7929 	DEPRECATION 	Found file '/Users/ouyukun/Downloads/Monash_University_logo.svg', failed to load as an image
+11.3524 	EXP 	window1: mouseVisible = True

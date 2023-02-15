@@ -1,0 +1,14 @@
+﻿participant,session,date,expName,psychopyVersion,OS,frameRate,space_press_continue.keys,space_press_continue.rt,space_press_continue_2.keys,space_press_continue_2.rt,space_press_continue_3.keys,space_press_continue_3.rt,space_press_continue_4.keys,space_press_continue_4.rt,space_press_continue_5.keys,space_press_continue_5.rt,space_press_continue_6.keys,space_press_continue_6.rt,prac_mask_loop_1.thisRepN,prac_mask_loop_1.thisTrialN,prac_mask_loop_1.thisN,prac_mask_loop_1.thisIndex,prac_mask_loop_1.ran,mask_name
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,space,1.87,,,,,,,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,space,1.627,,,,,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,space,2.976,,,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,space,0.598,,,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,space,0.357,,,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,space,0.784,,,,,,
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,0,0,0,2,1,masks/mask_003.jpg
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,0,1,1,0,1,masks/mask_001.jpg
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,0,2,2,1,1,masks/mask_002.jpg
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,0,3,3,4,1,masks/mask_005.jpg
+182168,001,2022-11-20_18h14.58.447,Info_measure_main_exp,2022.2.2,MacIntel,55.55555556,,,,,,,,,,,,,0,4,4,3,1,masks/mask_004.jpg

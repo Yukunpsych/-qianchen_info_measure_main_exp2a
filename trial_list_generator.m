@@ -1,0 +1,159 @@
+%%% This code generates a trial list for present-absent patch similarity
+%%% experiment
+
+%% load data from image patch experiment 2
+Results = get_data2(2);
+Results(:,9) = (abs(Results(:,9))-0.5).*Results(:,8);
+% null patches
+Find_N = Results(:,5) ==1;
+% present patch trials
+Find_CAP = Results(:,4) == 0 & Results(:,5) == 2; 
+Find_IAP = Results(:,4) == 1 & Results(:,5) == 3; 
+% collate patch indexes
+index{1} = Find_CAP | Find_IAP;  % present
+index{2} = Find_N; % null
+% get image numbers
+%img_num = unique(Results(:,11));
+
+%% get present patches
+selected_img = 131;
+present_patch_info = [num2str(1) num2str(selected_img) num2str(5) string(['present_patch/cong_131_3_a.jpg'])];
+
+%% get absent patches
+
+% % get file names for absent patches
+file_path_N_patches = '/Users/ouyukun/Desktop/Yukun/qianchen_info_measure_main_exp/Images and patches for experiment/nishimoto patch/';
+addpath ('/Users/ouyukun/Desktop/Yukun/qianchen_info_measure_main_exp/Images and patches for experiment/nishimoto patch/');
+patch_path = '/Users/ouyukun/Desktop/Yukun/qianchen_info_measure_main_exp/absent_patch/';
+
+% filePattern_N = fullfile(file_path_N_patches,'*.jpg');
+% theFiles_N = dir(filePattern_N);
+
+current_img = Results(Results(:,11)==selected_img & index{2},:);
+% null_loc = unique(current_img(:,7));
+null_loc = 3;
+
+for i = 1:length(null_loc) 
+    current_null = current_img(current_img(:,7) == null_loc(i),:); % select null patches of current location each response category
+        for n = 1:14 %n = 1:size(current_null,1) % copy every confused null patch in that location
+            string_order = num2str(current_null(n,12),'%07d');
+            null_patch_info(n,:) = [num2str(current_null(n,12)) num2str(selected_img) num2str(5) string(sprintf('%spatch%s.jpg','absent_patch/',string_order))];
+            null_file_name = sprintf('%spatch%s.jpg',file_path_N_patches,string_order);
+            copyfile(null_file_name,patch_path); % copy the patches to folder
+        end
+    
+clear current_null
+end
+
+
+%% generate list of present - absent pairs
+
+% first, generate all possible pairs of present-absent patches
+for i = 0:size(null_patch_info,1)
+    if i == 0 % first pair is the identity pair of present-present
+        current_pair_names = [present_patch_info(1,4) present_patch_info(1,4)]; % current present-absent pair file names
+        current_pair_info(i+1,1) = num2str(1);
+        current_pair_info(i+1,2) = num2str(1);
+        current_pair_loc = [present_patch_info(:,3) present_patch_info(:,3)];
+        ran = randperm(2); % for randomising the order of presenting present and absent
+        % put together patch file names and their info: first column - 0 =
+        % absent-absent pair, 1 = present-present pair; second column - image
+        % number of present image tested; third - patch location
+        present_absent_pair(i+1,:) = [num2str(1) present_patch_info(:,2) current_pair_loc(ran) current_pair_info(:,1) current_pair_info(:,2) current_pair_names(:,ran)]; 
+        clear ran
+        clear current_pair_names
+        clear current_pair_info
+    else
+        current_pair_names = [present_patch_info(1,4) null_patch_info(i,4)]; % current present-absent pair file names
+        current_pair_info = [num2str(1) null_patch_info(i,1)];
+        current_pair_loc = [present_patch_info(:,3) null_patch_info(i,3)];
+        ran = randperm(2); % for randomising the order of presenting present and absent
+        % put together patch file names and their info: first column - 0 =
+        % absent-absent pair, 1 = present-present pair; second column - image
+        % number of present image tested; third - patch location
+        present_absent_pair(i+1,:) = [num2str(1) present_patch_info(:,2) current_pair_loc(ran) current_pair_info(ran) current_pair_names(:,ran)]; 
+        clear ran
+        clear current_pair_names
+        clear current_pair_info
+    end
+end
+
+%% then, generate all possible pairs
+a = 1;
+for d = 1:size(null_patch_info,1)
+    num_of_pairs = size(null_patch_info,1) - d; % first patch in the list has n-1 possible non-repeating pairs with the remaining null pathces
+    for p = 0:num_of_pairs % when p = 0, the first pair would be an identity pair
+        current_pair_names = [null_patch_info(d,4) null_patch_info(d+p,4)];
+        current_pair_info = [null_patch_info(d,1) null_patch_info(d+p,1)];
+        current_pair_loc = [null_patch_info(d,3) null_patch_info(d+p,3)];
+        ran = randperm(2);
+        absent_absent_pair(a,:) = [num2str(0) present_patch_info(:,2) current_pair_loc(ran) current_pair_info(ran) current_pair_names(:,ran)];
+        a = a+1;
+        clear ran
+    end
+end
+
+%% collate both present-absent and absent-absent pairs together, and then
+% randomise
+all_pairs = [present_absent_pair; absent_absent_pair];
+ran = reshape(randperm(size(all_pairs,1)),[size(all_pairs,1),1]);
+all_pairs_final = all_pairs(ran,:); % randomise the pair presentation order
+%all_pairs_final = all_pairs;
+
+%% save trial list
+
+% first convert the variables that are supposed to be numbers back to
+% numbers,and add trial numbers
+trial_list = array2table([double(all_pairs_final(:,1:6))],'VariableNames',...
+    {'Pair_type','Image_num','Patch_1_loc','Patch_2_loc','Patch_1_info','Patch_2_info'}); 
+% now add the remaining two string column for the file name of the patches
+trial_list = addvars(trial_list,all_pairs_final(:,7),all_pairs_final(:,8),'NewVariableNames',{'Patch_1_name','Patch_2_name'});
+
+%%% save trial list for main trials
+writetable(trial_list,'info_exp_patch_3_cond.xlsx');
+
+
+%%  create practice trial list
+
+% % get file names for absent patches
+ file_path_N_patches = '/Users/ouyukun/Desktop/Yukun/qianchen_info_measure_main_exp/Images and patches for experiment/nishimoto patch/';
+ prac_patch_path = '/Users/ouyukun/Desktop/Yukun/qianchen_info_measure_main_exp/prac_patch/';
+
+current_img = Results(Results(:,11)==selected_img & index{2},:);
+null_loc = 5;
+
+% choose 6 null patches
+for i = 1:length(null_loc) 
+    current_null_prac = current_img(current_img(:,7) == null_loc(i),:); % select null patches of current location each response category
+        for n =1:3 %n = 1:size(current_null,1) % copy every confused null patch in that location
+            string_order_prac_1 = num2str(current_null_prac(n+15,12),'%07d');
+            string_order_prac_2 = num2str(current_null_prac(21-n,12),'%07d');
+            
+            % first patches for practice trials
+            prac_patch_1_info(n,:) = [num2str(current_null_prac(n+15,12)) num2str(0) num2str(selected_img) num2str(5) string(sprintf('%spatch%s.jpg','prac_patch/',string_order_prac_1))];
+            prac_1_file_name = sprintf('%spatch%s.jpg',file_path_N_patches,string_order_prac_1);
+            copyfile(prac_1_file_name,prac_patch_path); % copy the patches to folder
+            
+            % second patches for practice trials; the last pair will be
+            % patch 18 - 18, identity pair
+            prac_patch_2_info(n,:) = [num2str(current_null_prac(21-n,12)) num2str(0) num2str(selected_img) num2str(5) string(sprintf('%spatch%s.jpg','prac_patch/',string_order_prac_2))];
+            prac_2_file_name = sprintf('%spatch%s.jpg',file_path_N_patches,string_order_prac_2);
+            copyfile(prac_2_file_name,prac_patch_path); % copy the patches to folder
+            
+        end
+    
+clear current_null_prac
+end
+prac_trial_list_str = [prac_patch_1_info(:,2:4) prac_patch_2_info(:,4) prac_patch_1_info(:,1) prac_patch_2_info(:,1) prac_patch_1_info(:,end) prac_patch_2_info(:,end)];
+
+
+% save trial list for practice trials
+% first convert the variables that are supposed to be numbers back to
+% numbers,and add trial numbers
+prac_trial_list = array2table([double(prac_trial_list_str(:,1:6))],'VariableNames',...
+    {'Pair_type','Image_num','Patch_1_loc','Patch_2_loc','Patch_1_info','Patch_2_info'}); 
+% now add the remaining two string column for the file name of the patches
+prac_trial_list = addvars(prac_trial_list,prac_trial_list_str(:,7),prac_trial_list_str(:,8),'NewVariableNames',{'Patch_1_name','Patch_2_name'});
+writetable(prac_trial_list,'info_exp_prac_cond.xlsx');
+
+

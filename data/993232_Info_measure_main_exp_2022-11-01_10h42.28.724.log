@@ -1,0 +1,117 @@
+1.3030 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+3.9877 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+4.6370 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023A93E36DC0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023A943C3400>, multiSample=False, name='window1', numSamples=2, pos=(-1920, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.6371 	EXP 	window1: mouseVisible = True
+4.6371 	EXP 	window1: mouseVisible = False
+4.6371 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.6371 	EXP 	window1: recordFrameIntervals = False
+4.8030 	EXP 	window1: recordFrameIntervals = True
+4.9856 	EXP 	Screen (0) actual frame rate measured at 60.24Hz
+4.9856 	EXP 	window1: recordFrameIntervals = False
+6.2533 	EXP 	window1: mouseVisible = True
+6.2547 	EXP 	Created center_square = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([ 1.,  1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1.,  1., -1.]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=1.0, name='center_square', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([40.5, 40.5]), units='pix', vertices=ndarray(...), win=Window(...))
+6.3014 	EXP 	Created begin_mouse_center = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='begin_mouse_center', opacity=1.0, ori=0.0, pos=array([0. , 0.5]), rgb=UNKNOWN, text='\nClick the square to begin experiment', units='norm', win=Window(...), wrapWidth=1)
+6.3028 	EXP 	Created fixation_cross_1 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_cross_1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([30., 30.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.3051 	EXP 	Created first_patch = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='first_patch', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([270., 270.]), texRes=128.0, units='pix', win=Window(...))
+6.3070 	EXP 	Created mask_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='mask_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([270., 270.]), texRes=128.0, units='pix', win=Window(...))
+6.3083 	EXP 	Created fixation_cross_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_cross_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([30., 30.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.3102 	EXP 	Created second_patch = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='second_patch', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([270., 270.]), texRes=128.0, units='pix', win=Window(...))
+6.3120 	EXP 	Created mask_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='mask_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([270., 270.]), texRes=128.0, units='pix', win=Window(...))
+6.3120 	EXP 	window1: mouseVisible = True
+6.3173 	EXP 	Created response1disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='response67.png', interpolate=True, mask=None, maskParams=None, name='response1disk', opacity=1.0, ori=0.0, pos=array([135., 135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3223 	EXP 	Created response3disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='response45.png', interpolate=True, mask=None, maskParams=None, name='response3disk', opacity=1.0, ori=0.0, pos=array([ 135., -135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3272 	EXP 	Created response5disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image='response23.png', interpolate=True, mask=None, maskParams=None, name='response5disk', opacity=1.0, ori=0.0, pos=array([-135., -135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3319 	EXP 	Created response7disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, image='response01.png', interpolate=True, mask=None, maskParams=None, name='response7disk', opacity=1.0, ori=0.0, pos=array([-135.,  135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3447 	EXP 	Created text_23 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_23', opacity=1.0, ori=0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+6.3447 	EXP 	window1: mouseVisible = True
+6.3493 	EXP 	Created response1disk_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='response67.png', interpolate=True, mask=None, maskParams=None, name='response1disk_2', opacity=1.0, ori=0.0, pos=array([135., 135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3536 	EXP 	Created response3disk_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='response45.png', interpolate=True, mask=None, maskParams=None, name='response3disk_2', opacity=1.0, ori=0.0, pos=array([ 135., -135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3579 	EXP 	Created response5disk_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='response23.png', interpolate=True, mask=None, maskParams=None, name='response5disk_2', opacity=1.0, ori=0.0, pos=array([-135., -135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3624 	EXP 	Created response7disk_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image='response01.png', interpolate=True, mask=None, maskParams=None, name='response7disk_2', opacity=1.0, ori=0.0, pos=array([-135.,  135.]), size=array([270., 270.]), texRes=128, units='pix', win=Window(...))
+6.3665 	EXP 	Created text_51 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_51', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1000)
+6.3673 	EXP 	Created center_square_2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, fillColor=array([ 1.,  1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1.,  1., -1.]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=1.0, name='center_square_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([40.5, 40.5]), units='pix', vertices=ndarray(...), win=Window(...))
+6.4011 	EXP 	center_square: autoDraw = True
+6.4011 	EXP 	begin_mouse_center: autoDraw = True
+8.5506 	DATA 	Mouse: Left button down, pos=(957,540)
+8.5551 	EXP 	Imported info_measure_exp_cond.xlsx as conditions, 1 conditions, 2 params
+8.5553 	EXP 	Created sequence: random, trialTypes=1, nReps=1, seed=None
+8.5555 	EXP 	New trial (rep=0, index=0): {'Absent': 'absent_patch/patch0002178.jpg', 'Present': 'present_patch/cong_131_5_a.jpg'}
+8.5562 	EXP 	window1: mouseVisible = False
+8.5671 	EXP 	center_square: autoDraw = False
+8.5671 	EXP 	begin_mouse_center: autoDraw = False
+8.5671 	EXP 	first_patch: image = 'absent_patch/patch0002178.jpg'
+8.5671 	EXP 	fixation_cross_1: autoDraw = True
+8.6510 	DATA 	Mouse:  Left button up, pos=(957,540)
+9.0504 	EXP 	first_patch: autoDraw = True
+9.0668 	EXP 	fixation_cross_1: autoDraw = False
+9.2369 	EXP 	Imported masks_cond.xlsx as conditions, 4 conditions, 1 params
+9.2372 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+9.2373 	EXP 	New trial (rep=0, index=0): {'mask_name': 'masks/mask_002.jpg'}
+9.2504 	EXP 	first_patch: autoDraw = False
+9.2504 	EXP 	fixation_cross_1: autoDraw = False
+9.2504 	EXP 	first_patch: autoDraw = False
+9.2504 	EXP 	mask_image: image = 'masks/mask_002.jpg'
+9.2504 	EXP 	mask_image: autoDraw = True
+9.3007 	EXP 	New trial (rep=0, index=1): {'mask_name': 'masks/mask_003.jpg'}
+9.3168 	EXP 	mask_image: autoDraw = False
+9.3168 	EXP 	mask_image: image = 'masks/mask_003.jpg'
+9.3168 	EXP 	mask_image: autoDraw = True
+9.3671 	EXP 	New trial (rep=0, index=2): {'mask_name': 'masks/mask_001.jpg'}
+9.3839 	EXP 	mask_image: autoDraw = False
+9.3839 	EXP 	mask_image: image = 'masks/mask_001.jpg'
+9.3839 	EXP 	mask_image: autoDraw = True
+9.4172 	EXP 	New trial (rep=0, index=3): {'mask_name': 'masks/mask_004.jpg'}
+9.4339 	EXP 	mask_image: autoDraw = False
+9.4339 	EXP 	mask_image: image = 'masks/mask_004.jpg'
+9.4339 	EXP 	mask_image: autoDraw = True
+9.5001 	EXP 	mask_image: autoDraw = False
+9.5001 	EXP 	second_patch: image = 'present_patch/cong_131_5_a.jpg'
+9.5001 	EXP 	fixation_cross_2: autoDraw = True
+9.9835 	EXP 	second_patch: autoDraw = True
+10.0002 	EXP 	fixation_cross_2: autoDraw = False
+10.1716 	EXP 	Imported masks_cond.xlsx as conditions, 5 conditions, 1 params
+10.1719 	EXP 	Created sequence: random, trialTypes=5, nReps=1, seed=None
+10.1721 	EXP 	New trial (rep=0, index=0): {'mask_name': 'masks/mask_005.jpg'}
+10.1848 	EXP 	second_patch: autoDraw = False
+10.1848 	EXP 	fixation_cross_2: autoDraw = False
+10.1848 	EXP 	second_patch: autoDraw = False
+10.1848 	EXP 	mask_image: image = 'masks/mask_005.jpg'
+10.1848 	EXP 	mask_image: autoDraw = True
+10.2347 	EXP 	New trial (rep=0, index=1): {'mask_name': 'masks/mask_001.jpg'}
+10.2511 	EXP 	mask_image: autoDraw = False
+10.2511 	EXP 	mask_image: image = 'masks/mask_001.jpg'
+10.2511 	EXP 	mask_image: autoDraw = True
+10.3015 	EXP 	New trial (rep=0, index=2): {'mask_name': 'masks/mask_003.jpg'}
+10.3183 	EXP 	mask_image: autoDraw = False
+10.3183 	EXP 	mask_image: image = 'masks/mask_003.jpg'
+10.3183 	EXP 	mask_image: autoDraw = True
+10.3516 	EXP 	New trial (rep=0, index=3): {'mask_name': 'masks/mask_002.jpg'}
+10.3676 	EXP 	mask_image: autoDraw = False
+10.3676 	EXP 	mask_image: image = 'masks/mask_002.jpg'
+10.3676 	EXP 	mask_image: autoDraw = True
+10.4173 	EXP 	New trial (rep=0, index=4): {'mask_name': 'masks/mask_004.jpg'}
+10.4340 	EXP 	mask_image: autoDraw = False
+10.4340 	EXP 	mask_image: image = 'masks/mask_004.jpg'
+10.4340 	EXP 	mask_image: autoDraw = True
+10.4845 	EXP 	window1: mouseVisible = True
+10.5001 	EXP 	mask_image: autoDraw = False
+10.5001 	EXP 	response1disk: autoDraw = True
+10.5001 	EXP 	response3disk: autoDraw = True
+10.5001 	EXP 	response5disk: autoDraw = True
+10.5001 	EXP 	response7disk: autoDraw = True
+10.5001 	EXP 	text_23: autoDraw = True
+11.6174 	DATA 	Mouse: Left button down, pos=(1083,691)
+11.6333 	EXP 	response1disk: autoDraw = False
+11.6333 	EXP 	response3disk: autoDraw = False
+11.6333 	EXP 	response5disk: autoDraw = False
+11.6333 	EXP 	response7disk: autoDraw = False
+11.6333 	EXP 	text_23: autoDraw = False
+11.6333 	EXP 	response1disk_2: autoDraw = True
+11.6333 	EXP 	response3disk_2: autoDraw = True
+11.6333 	EXP 	response5disk_2: autoDraw = True
+11.6333 	EXP 	response7disk_2: autoDraw = True
+11.6333 	EXP 	text_51: autoDraw = True
+11.6333 	EXP 	center_square_2: autoDraw = True
+11.7170 	DATA 	Mouse:  Left button up, pos=(1083,691)
+14.0670 	DATA 	Mouse: Left button down, pos=(954,539)
+14.0989 	EXP 	window1: mouseVisible = True
