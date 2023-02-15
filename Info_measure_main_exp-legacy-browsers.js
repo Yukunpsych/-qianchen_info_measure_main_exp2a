@@ -92,44 +92,44 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'prac_patch/patch0002514.jpg', 'path': 'prac_patch/patch0002514.jpg'},
-    {'name': 'absent_patch/patch0002211.jpg', 'path': 'absent_patch/patch0002211.jpg'},
-    {'name': 'response67.png', 'path': 'response67.png'},
-    {'name': 'absent_patch/patch0002223.jpg', 'path': 'absent_patch/patch0002223.jpg'},
-    {'name': 'absent_patch/patch0001947.jpg', 'path': 'absent_patch/patch0001947.jpg'},
+    {'name': 'info_exp_prac_cond.xlsx', 'path': 'info_exp_prac_cond.xlsx'},
+    {'name': 'absent_patch/patch0002271.jpg', 'path': 'absent_patch/patch0002271.jpg'},
     {'name': 'absent_patch/patch0002031.jpg', 'path': 'absent_patch/patch0002031.jpg'},
-    {'name': 'absent_patch/patch0002283.jpg', 'path': 'absent_patch/patch0002283.jpg'},
-    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
-    {'name': 'info_exp_patch_3_cond.xlsx', 'path': 'info_exp_patch_3_cond.xlsx'},
-    {'name': 'instructions/response screen.png', 'path': 'instructions/response screen.png'},
-    {'name': 'absent_patch/patch0002175.jpg', 'path': 'absent_patch/patch0002175.jpg'},
-    {'name': 'present_patch/cong_131_3_a.jpg', 'path': 'present_patch/cong_131_3_a.jpg'},
-    {'name': 'prac_patch/patch0002406.jpg', 'path': 'prac_patch/patch0002406.jpg'},
-    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'instructions/instruction_patch_2.mp4', 'path': 'instructions/instruction_patch_2.mp4'},
     {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
-    {'name': 'prac_patch/patch0002490.jpg', 'path': 'prac_patch/patch0002490.jpg'},
-    {'name': 'absent_patch/patch0002151.jpg', 'path': 'absent_patch/patch0002151.jpg'},
-    {'name': 'absent_patch/patch0002163.jpg', 'path': 'absent_patch/patch0002163.jpg'},
-    {'name': 'response45.png', 'path': 'response45.png'},
-    {'name': 'prac_patch/patch0002370.jpg', 'path': 'prac_patch/patch0002370.jpg'},
     {'name': 'Monash_University_logo.svg.png', 'path': 'Monash_University_logo.svg.png'},
-    {'name': 'response01.png', 'path': 'response01.png'},
+    {'name': 'prac_patch/patch0002406.jpg', 'path': 'prac_patch/patch0002406.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'instructions/instruction_patch_1.mp4', 'path': 'instructions/instruction_patch_1.mp4'},
+    {'name': 'info_exp_patch_3_cond.xlsx', 'path': 'info_exp_patch_3_cond.xlsx'},
+    {'name': 'prac_patch/patch0002490.jpg', 'path': 'prac_patch/patch0002490.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'present_patch/cong_131_3_a.jpg', 'path': 'present_patch/cong_131_3_a.jpg'},
+    {'name': 'absent_patch/patch0002367.jpg', 'path': 'absent_patch/patch0002367.jpg'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'instructions/all_patches.png', 'path': 'instructions/all_patches.png'},
+    {'name': 'absent_patch/patch0002151.jpg', 'path': 'absent_patch/patch0002151.jpg'},
+    {'name': 'prac_patch/patch0002526.jpg', 'path': 'prac_patch/patch0002526.jpg'},
     {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
     {'name': 'absent_patch/patch0002043.jpg', 'path': 'absent_patch/patch0002043.jpg'},
-    {'name': 'instructions/instruction_patch_1.mp4', 'path': 'instructions/instruction_patch_1.mp4'},
-    {'name': 'absent_patch/patch0001995.jpg', 'path': 'absent_patch/patch0001995.jpg'},
-    {'name': 'instructions/response screen 2.png', 'path': 'instructions/response screen 2.png'},
-    {'name': 'response23.png', 'path': 'response23.png'},
     {'name': 'absent_patch/patch0002247.jpg', 'path': 'absent_patch/patch0002247.jpg'},
-    {'name': 'info_exp_prac_cond.xlsx', 'path': 'info_exp_prac_cond.xlsx'},
-    {'name': 'prac_patch/patch0002526.jpg', 'path': 'prac_patch/patch0002526.jpg'},
-    {'name': 'absent_patch/patch0002367.jpg', 'path': 'absent_patch/patch0002367.jpg'},
-    {'name': 'absent_patch/patch0002271.jpg', 'path': 'absent_patch/patch0002271.jpg'},
-    {'name': 'instructions/all_patches.png', 'path': 'instructions/all_patches.png'},
+    {'name': 'instructions/response screen.png', 'path': 'instructions/response screen.png'},
+    {'name': 'absent_patch/patch0001947.jpg', 'path': 'absent_patch/patch0001947.jpg'},
+    {'name': 'response23.png', 'path': 'response23.png'},
+    {'name': 'prac_patch/patch0002370.jpg', 'path': 'prac_patch/patch0002370.jpg'},
+    {'name': 'response45.png', 'path': 'response45.png'},
+    {'name': 'absent_patch/patch0002163.jpg', 'path': 'absent_patch/patch0002163.jpg'},
+    {'name': 'absent_patch/patch0002223.jpg', 'path': 'absent_patch/patch0002223.jpg'},
+    {'name': 'instructions/response screen 2.png', 'path': 'instructions/response screen 2.png'},
+    {'name': 'absent_patch/patch0002211.jpg', 'path': 'absent_patch/patch0002211.jpg'},
+    {'name': 'absent_patch/patch0002175.jpg', 'path': 'absent_patch/patch0002175.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'absent_patch/patch0002283.jpg', 'path': 'absent_patch/patch0002283.jpg'},
+    {'name': 'prac_patch/patch0002514.jpg', 'path': 'prac_patch/patch0002514.jpg'},
+    {'name': 'absent_patch/patch0001995.jpg', 'path': 'absent_patch/patch0001995.jpg'},
     {'name': 'absent_patch/patch0002079.jpg', 'path': 'absent_patch/patch0002079.jpg'},
-    {'name': 'instructions/instruction_patch_2.mp4', 'path': 'instructions/instruction_patch_2.mp4'},
-    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
-    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'}
+    {'name': 'response67.png', 'path': 'response67.png'},
+    {'name': 'response01.png', 'path': 'response01.png'}
   ]
 });
 
@@ -142,10 +142,9 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2022.2.4';
+  expInfo['psychopyVersion'] = '2022.2.5';
   expInfo['OS'] = window.navigator.platform;
 
-  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
 
   // store frame rate of monitor if we can measure it successfully
   expInfo['frameRate'] = psychoJS.window.getActualFrameRate();
@@ -157,6 +156,11 @@ async function updateInfo() {
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
   
+
+  
+  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+
+
   return Scheduler.Event.NEXT;
 }
 
@@ -338,7 +342,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'monash_logo', units : 'pix', 
     image : 'Monash_University_logo.svg.png', mask : undefined,
-    ori : 0.0, pos : [0, ((win_pix_y * 0.55) / 3)], size : [250, 125],
+    ori : 0.0, pos : [0, ((win_pix_y * 1.2) / 3)], size : [250, 125],
     color : new util.Color([1,1,1]), opacity : 1.0,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
