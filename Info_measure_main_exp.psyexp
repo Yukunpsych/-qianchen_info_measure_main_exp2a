@@ -2909,7 +2909,7 @@
         <Param val="monash_logo" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0,win_pix_y*0.20)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0,win_pix_y*0.43)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(win_pix_x*0.09,win_pix_y*0.09)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
