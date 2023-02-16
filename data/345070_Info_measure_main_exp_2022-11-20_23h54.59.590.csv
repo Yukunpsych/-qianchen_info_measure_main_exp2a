@@ -1,7 +1,0 @@
-﻿participant,session,date,expName,psychopyVersion,OS,frameRate,space_press_continue.keys,space_press_continue.rt,space_press_continue_2.keys,space_press_continue_2.rt,space_press_continue_3.keys,space_press_continue_3.rt,space_press_continue_4.keys,space_press_continue_4.rt
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,,,,,,,,
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,,,,,,,,
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,space,3.2861,,,,,,
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,,,space,3.2022,,,,
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,,,,,space,3.0262,,
-345070,001,2022-11-20_23h54.59.590,Info_measure_main_exp,2022.2.2,Win32,9.599784965,,,,,,,space,9.359
