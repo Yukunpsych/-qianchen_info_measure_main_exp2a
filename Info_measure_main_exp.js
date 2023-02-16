@@ -344,9 +344,9 @@ async function experimentInit() {
   
   monash_logo = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'monash_logo', units : 'norm', 
+    name : 'monash_logo', units : 'pix', 
     image : 'Monash_University_logo.svg.png', mask : undefined,
-    ori : 0.0, pos : [0, (+ 0.7)], size : [(+ 0.3), (+ 0.3)],
+    ori : 0.0, pos : [0, (win_pix_y * 0.2)], size : [(win_pix_x * 0.09), (win_pix_y * 0.09)],
     color : new util.Color([1,1,1]), opacity : 1.0,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
