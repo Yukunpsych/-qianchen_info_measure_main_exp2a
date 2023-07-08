@@ -1,12 +1,14 @@
 %%%%%% this code cleans the data for patch similarity experiment
 
 % load raw data file names
-folder1 = '/Users/ouyukun/Desktop/200data'; 
+folder1 = 'C:\Users\aufb\Desktop\intern\data'; 
 filePattern1 = fullfile(folder1,'*.csv');
 allFiles1 = struct2cell(dir(filePattern1));
 data_file = string(allFiles1(1,:)); % here, we load all data file names into one row array
 
-%% loop through every data file
+% Initialize date_matrix
+data_matrix = [];
+% loop through every data file
 a = 0;
 for i = 1:size(data_file,2)
     % load current data file
@@ -44,11 +46,8 @@ for i = 1:size(data_file,2)
 end
 
 %% check first and second pass similarity distribution 
-<<<<<<< HEAD
-data_matrix = readtable("200_Participants_data.csv");
-=======
-data_matrix = readtable('online_pilot_data.csv');
->>>>>>> 465b1be4e18d7a949a957e5586d2b5154048c706
+% data_matrix = readtable("200_Participants_data.csv");
+data_matrix = readtable('cleaned_data.csv');
 figure('Color','white');
 histogram(data_matrix.similarity(data_matrix.Pass == 1),'FaceAlpha',0.5);
 hold on
@@ -63,10 +62,6 @@ subject_num = unique(data_matrix.Subject_number);
 subject_id = unique(data_matrix.participant);
 sub_pass_corr = [];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 465b1be4e18d7a949a957e5586d2b5154048c706
 for s = 1:length(subject_num)
     current_subject = data_matrix(data_matrix.Subject_number == s, :); % select current subject data
     a = 1;
@@ -103,13 +98,42 @@ figure('Color','white');
 histogram(sub_pass_corr(:,2))
 title('Double pass correlations of participants'), xlabel('Pearson Correlation (r)'), ylabel('Count');
 
+%% 
+% set the threshold for minimum acceptable correlation = 0.4
+threshold = 0.4; 
+low_corr_participants = find(sub_pass_corr(:, 2) < threshold);
+% record original size
+original_size = size(data_matrix, 1);
+
+% Get the subject numbers of the low correlation participants
+low_corr_subject_numbers = subject_num(low_corr_participants);
+
+% Remove participants with low double-pass correlation from the data matrix
+data_matrix = data_matrix(~ismember(data_matrix.Subject_number, low_corr_subject_numbers), :);
+
+% Print eliminated subject numbers
+eliminated_subjects = setdiff(subject_num, data_matrix.Subject_number);
+disp('Eliminated subject numbers:');
+disp(eliminated_subjects);
+
+
+%% 
+%check which rows got removed
+updated_size = size(data_matrix, 1);
+eliminated_rows = original_size - updated_size;
+
+if eliminated_rows > 0
+    eliminated_subject_numbers = unique(data_matrix(original_size - eliminated_rows + 1:end, 'Subject_number'));
+    disp('Eliminated rows:');
+    disp(eliminated_subject_numbers);
+else
+    disp('No rows eliminated.');
+end
+
 %% now that we have verified the validity of data, we can save the data matrix to a csv file
 
-<<<<<<< HEAD
-writetable(data_matrix,'200_Participants_data.csv');
+writetable(data_matrix,'cleaned_data.csv');
 
-=======
-writetable(data_matrix,'online_pilot_data_25.csv');
->>>>>>> 465b1be4e18d7a949a957e5586d2b5154048c706
+% writetable(data_matrix,'online_pilot_data_25.csv');
 
 %dfd
