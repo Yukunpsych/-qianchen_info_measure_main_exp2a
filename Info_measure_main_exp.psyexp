@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2022.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2023.1.3">
   <Settings>
     <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
@@ -7,6 +7,7 @@
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
     <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="" valType="str" updates="None" name="End Message"/>
     <Param val="{'participant':'f&quot;{randint(0, 999999):06.0f}&quot;', 'session':'001'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
@@ -26,6 +27,8 @@
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
     <Param val="[1440, 900]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+    <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
@@ -61,10 +64,11 @@
     <Param val="" valType="str" updates="None" name="tbModel"/>
     <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
     <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
   </Settings>
   <Routines>
     <Routine name="StimSetUp">
-      <CodeComponent name="Ini_code">
+      <CodeComponent name="Ini_code" plugin="None">
         <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="# initialisations&amp;#10;# timing&amp;#10;fixation_cross_duration = 0.5&amp;#10;image_duration = 0.15&amp;#10;exit_message_duration = fixation_cross_duration + image_duration&amp;#10;&amp;#10;# feedback square height&amp;#10;feedback_square_width = 0.03 # set in fractions of screen height&amp;#10;&amp;#10;# response feedback time&amp;#10;response_feedback_time = 4&amp;#10;&amp;#10;# Set response size&amp;#10;win_pix_x = (win.size[0]);&amp;#10;win_pix_y = (win.size[1]);&amp;#10;a = win_pix_y*0.75/6&amp;#10;b = win_pix_y*0.75/3&amp;#10;#print('Response width: ',a)&amp;#10;#print('Response height: ',b)&amp;#10;&amp;#10;# trial number setup&amp;#10;trialnumber = 0&amp;#10;alltrials = 240" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -83,7 +87,7 @@
       </CodeComponent>
     </Routine>
     <Routine name="Startup">
-      <CodeComponent name="Python_initialisation">
+      <CodeComponent name="Python_initialisation" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="# VARIOUS INITIALISATIONS #&amp;#10;&amp;#10;# updated later in screen_scale to get mm values&amp;#10;win_pix_x = (win.size[0]);&amp;#10;win_pix_y = (win.size[1]);" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -102,7 +106,7 @@
       </CodeComponent>
     </Routine>
     <Routine name="patch_2">
-      <PolygonComponent name="fixation_cross_2">
+      <PolygonComponent name="fixation_cross_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -129,7 +133,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ImageComponent name="second_patch">
+      <ImageComponent name="second_patch" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -156,7 +160,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <CodeComponent name="disable_mouse_2">
+      <CodeComponent name="disable_mouse_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -173,7 +177,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="disable_mouse_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="Esc_exit_17">
+      <TextComponent name="Esc_exit_17" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -200,7 +204,7 @@
       </TextComponent>
     </Routine>
     <Routine name="patch_1">
-      <PolygonComponent name="fixation_cross_1">
+      <PolygonComponent name="fixation_cross_1" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -227,7 +231,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ImageComponent name="first_patch">
+      <ImageComponent name="first_patch" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -254,7 +258,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <CodeComponent name="disable_mouse">
+      <CodeComponent name="disable_mouse" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -271,7 +275,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="disable_mouse" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="Esc_exit_16">
+      <TextComponent name="Esc_exit_16" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -298,7 +302,7 @@
       </TextComponent>
     </Routine>
     <Routine name="mask">
-      <ImageComponent name="mask_image">
+      <ImageComponent name="mask_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -325,7 +329,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="Esc_exit_14">
+      <TextComponent name="Esc_exit_14" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -352,8 +356,9 @@
       </TextComponent>
     </Routine>
     <Routine name="response">
-      <MouseComponent name="mouse">
+      <MouseComponent name="mouse" plugin="None">
         <Param val="response1disk,response3disk,response5disk,response7disk" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -367,10 +372,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <CodeComponent name="code_4">
+      <CodeComponent name="code_4" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -387,7 +393,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_4" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <ImageComponent name="response1disk">
+      <ImageComponent name="response1disk" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -414,7 +420,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response3disk">
+      <ImageComponent name="response3disk" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -441,7 +447,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response5disk">
+      <ImageComponent name="response5disk" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -468,7 +474,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response7disk">
+      <ImageComponent name="response7disk" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -495,7 +501,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="text_23">
+      <TextComponent name="text_23" plugin="None">
         <Param val="white" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -520,7 +526,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_similar">
+      <TextComponent name="most_similar" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -545,7 +551,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_different">
+      <TextComponent name="most_different" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -570,7 +576,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_10">
+      <TextComponent name="Esc_exit_10" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -595,7 +601,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="enable_mouse">
+      <CodeComponent name="enable_mouse" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -614,8 +620,9 @@
       </CodeComponent>
     </Routine>
     <Routine name="correct_mouse">
-      <MouseComponent name="mouse_11">
+      <MouseComponent name="mouse_11" plugin="None">
         <Param val="center_square" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -629,10 +636,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <ImageComponent name="response1disk_2">
+      <ImageComponent name="response1disk_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -659,7 +667,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response3disk_2">
+      <ImageComponent name="response3disk_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -686,7 +694,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response5disk_2">
+      <ImageComponent name="response5disk_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -713,7 +721,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response7disk_2">
+      <ImageComponent name="response7disk_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -740,7 +748,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="text_51">
+      <TextComponent name="text_51" plugin="None">
         <Param val="yellow" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -765,7 +773,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1000" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <PolygonComponent name="center_square">
+      <PolygonComponent name="center_square" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -792,7 +800,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <TextComponent name="most_similar_2">
+      <TextComponent name="most_similar_2" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -817,7 +825,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_different_2">
+      <TextComponent name="most_different_2" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -842,7 +850,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="trial_text_2">
+      <TextComponent name="trial_text_2" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -867,7 +875,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_11">
+      <TextComponent name="Esc_exit_11" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -894,8 +902,9 @@
       </TextComponent>
     </Routine>
     <Routine name="begin_task">
-      <MouseComponent name="mouse_1">
+      <MouseComponent name="mouse_1" plugin="None">
         <Param val="center_square" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -909,10 +918,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <TextComponent name="begin_mouse_center">
+      <TextComponent name="begin_mouse_center" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -937,7 +947,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_15">
+      <TextComponent name="Esc_exit_15" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -962,7 +972,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="space_press_continue_7">
+      <KeyboardComponent name="space_press_continue_7" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -970,6 +980,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_7" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -982,7 +993,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="end_of_experiment">
-      <TextComponent name="thank_you">
+      <TextComponent name="thank_you" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1007,7 +1018,7 @@
         <Param val="height" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="space_exit">
+      <KeyboardComponent name="space_exit" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1015,6 +1026,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_exit" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1027,7 +1039,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="prac_patch_1">
-      <PolygonComponent name="fixation_cross">
+      <PolygonComponent name="fixation_cross" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1054,7 +1066,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ImageComponent name="practice_patch_1">
+      <ImageComponent name="practice_patch_1" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1081,7 +1093,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <CodeComponent name="disable_mouse_3">
+      <CodeComponent name="disable_mouse_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -1098,7 +1110,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="disable_mouse_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="Esc_exit_13">
+      <TextComponent name="Esc_exit_13" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1125,7 +1137,7 @@
       </TextComponent>
     </Routine>
     <Routine name="prac_patch_2">
-      <PolygonComponent name="fixation_cross_3">
+      <PolygonComponent name="fixation_cross_3" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1152,7 +1164,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ImageComponent name="practice_patch_2">
+      <ImageComponent name="practice_patch_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1179,7 +1191,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="Esc_exit_12">
+      <TextComponent name="Esc_exit_12" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1206,7 +1218,7 @@
       </TextComponent>
     </Routine>
     <Routine name="resposne_feedback">
-      <CodeComponent name="feedback_code">
+      <CodeComponent name="feedback_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -1223,7 +1235,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="feedback_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="text_55">
+      <TextComponent name="text_55" plugin="None">
         <Param val="white" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1248,7 +1260,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1000" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="text_56">
+      <TextComponent name="text_56" plugin="None">
         <Param val="white" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1273,7 +1285,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1000" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_8">
+      <TextComponent name="Esc_exit_8" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1300,7 +1312,7 @@
       </TextComponent>
     </Routine>
     <Routine name="instruction_1">
-      <TextComponent name="instruction_1_text">
+      <TextComponent name="instruction_1_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1321,11 +1333,11 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Welcome to our experiment!&amp;#10;&amp;#10;In this experiment, you will see the following images, and will be asked to report how similar these images are to each other.  " valType="str" updates="constant" name="text"/>
+        <Param val="Welcome to our experiment!&amp;#10;&amp;#10;In this experiment, you will see the following images, focus on the perceptual aspects, you will be asked to report how similar these images are to each other.  " valType="str" updates="constant" name="text"/>
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ImageComponent name="all_patches">
+      <ImageComponent name="all_patches" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1352,7 +1364,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="norm" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <KeyboardComponent name="space_press_continue">
+      <KeyboardComponent name="space_press_continue" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1360,6 +1372,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1370,7 +1383,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="press_space_continue">
+      <TextComponent name="press_space_continue" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1395,7 +1408,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit">
+      <TextComponent name="Esc_exit" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1422,7 +1435,7 @@
       </TextComponent>
     </Routine>
     <Routine name="instruction_2">
-      <TextComponent name="instruction_text_2">
+      <TextComponent name="instruction_text_2" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1447,7 +1460,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <MovieComponent name="patch_1_movie">
+      <MovieComponent name="patch_1_movie" plugin="None">
         <Param val="False" valType="bool" updates="None" name="No audio"/>
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="moviepy" valType="str" updates="None" name="backend"/>
@@ -1472,7 +1485,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1" valType="num" updates="None" name="volume"/>
       </MovieComponent>
-      <KeyboardComponent name="space_press_continue_2">
+      <KeyboardComponent name="space_press_continue_2" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1480,6 +1493,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_2" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1490,7 +1504,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="press_space_continue_2">
+      <TextComponent name="press_space_continue_2" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1515,7 +1529,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_2">
+      <TextComponent name="Esc_exit_2" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1542,7 +1556,7 @@
       </TextComponent>
     </Routine>
     <Routine name="instruction_3">
-      <TextComponent name="instruction_text_3">
+      <TextComponent name="instruction_text_3" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1567,7 +1581,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <MovieComponent name="patch_2_movie">
+      <MovieComponent name="patch_2_movie" plugin="None">
         <Param val="False" valType="bool" updates="None" name="No audio"/>
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="moviepy" valType="str" updates="None" name="backend"/>
@@ -1592,7 +1606,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1" valType="num" updates="None" name="volume"/>
       </MovieComponent>
-      <KeyboardComponent name="space_press_continue_3">
+      <KeyboardComponent name="space_press_continue_3" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1600,6 +1614,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_3" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1610,7 +1625,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="press_space_continue_3">
+      <TextComponent name="press_space_continue_3" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1635,7 +1650,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_3">
+      <TextComponent name="Esc_exit_3" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1662,7 +1677,7 @@
       </TextComponent>
     </Routine>
     <Routine name="instruction_4">
-      <TextComponent name="instruction_text_4">
+      <TextComponent name="instruction_text_4" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1683,11 +1698,11 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Finally, a response screen will appear. You are asked to rate how similar the two images you just saw are to each other, by choosing one of the numbers on the response screen.&amp;#10;&amp;#10;0 =&gt;  most similar&amp;#10;7 =&gt; most different" valType="str" updates="constant" name="text"/>
+        <Param val="Finally, a response screen will appear. You are asked to rate how similar the two images you just saw are to each other in perceptual aspects by choosing one of the numbers on the response screen.&amp;#10;&amp;#10;0 =&gt;  most similar&amp;#10;7 =&gt; most different" valType="str" updates="constant" name="text"/>
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="use_all_numbers">
+      <TextComponent name="use_all_numbers" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1712,7 +1727,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ImageComponent name="response_screen_intr">
+      <ImageComponent name="response_screen_intr" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1739,7 +1754,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="height" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <KeyboardComponent name="space_press_continue_4">
+      <KeyboardComponent name="space_press_continue_4" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1747,6 +1762,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_4" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1757,7 +1773,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="space_continue_low">
+      <TextComponent name="space_continue_low" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1782,7 +1798,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_4">
+      <TextComponent name="Esc_exit_4" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1809,7 +1825,7 @@
       </TextComponent>
     </Routine>
     <Routine name="instruction_5">
-      <TextComponent name="instruction_text_5">
+      <TextComponent name="instruction_text_5" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1834,7 +1850,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ImageComponent name="response_screen_after">
+      <ImageComponent name="response_screen_after" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1861,7 +1877,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="height" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <KeyboardComponent name="space_press_continue_5">
+      <KeyboardComponent name="space_press_continue_5" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1869,6 +1885,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_5" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1879,7 +1896,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="space_continue_low_2">
+      <TextComponent name="space_continue_low_2" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1904,7 +1921,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_5">
+      <TextComponent name="Esc_exit_5" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1931,7 +1948,7 @@
       </TextComponent>
     </Routine>
     <Routine name="begin_practice">
-      <TextComponent name="prac_begin_text">
+      <TextComponent name="prac_begin_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1956,7 +1973,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="prac_begin_space">
+      <TextComponent name="prac_begin_space" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -1981,7 +1998,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="space_press_continue_6">
+      <KeyboardComponent name="space_press_continue_6" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1989,6 +2006,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_6" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1999,7 +2017,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <TextComponent name="Esc_exit_6">
+      <TextComponent name="Esc_exit_6" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2026,7 +2044,7 @@
       </TextComponent>
     </Routine>
     <Routine name="trial_num_break">
-      <TextComponent name="trial_num_text">
+      <TextComponent name="trial_num_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2051,7 +2069,7 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="space_press_continue_8">
+      <KeyboardComponent name="space_press_continue_8" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -2059,6 +2077,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="space_press_continue_8" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2071,7 +2090,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="count_trial_number">
-      <CodeComponent name="trial_num_count">
+      <CodeComponent name="trial_num_count" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -2090,8 +2109,9 @@
       </CodeComponent>
     </Routine>
     <Routine name="prac_response">
-      <MouseComponent name="mouse_2">
+      <MouseComponent name="mouse_2" plugin="None">
         <Param val="response1disk,response3disk,response5disk,response7disk" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -2105,10 +2125,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <CodeComponent name="code">
+      <CodeComponent name="code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -2125,7 +2146,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <ImageComponent name="response1disk_3">
+      <ImageComponent name="response1disk_3" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2152,7 +2173,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response5disk_3">
+      <ImageComponent name="response5disk_3" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2179,7 +2200,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response3disk_3">
+      <ImageComponent name="response3disk_3" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2206,7 +2227,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response7disk_3">
+      <ImageComponent name="response7disk_3" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2233,7 +2254,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="text">
+      <TextComponent name="text" plugin="None">
         <Param val="white" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2258,7 +2279,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_similar_3">
+      <TextComponent name="most_similar_3" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2283,7 +2304,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_different_3">
+      <TextComponent name="most_different_3" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2308,7 +2329,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_7">
+      <TextComponent name="Esc_exit_7" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2333,7 +2354,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="enable_mouse_2">
+      <CodeComponent name="enable_mouse_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -2352,8 +2373,9 @@
       </CodeComponent>
     </Routine>
     <Routine name="prac_correct_mouse">
-      <MouseComponent name="mouse_12">
+      <MouseComponent name="mouse_12" plugin="None">
         <Param val="center_square" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -2367,10 +2389,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <ImageComponent name="response1disk_4">
+      <ImageComponent name="response1disk_4" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2397,7 +2420,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response3disk_4">
+      <ImageComponent name="response3disk_4" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2424,7 +2447,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response5disk_4">
+      <ImageComponent name="response5disk_4" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2451,7 +2474,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response7disk_4">
+      <ImageComponent name="response7disk_4" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2478,7 +2501,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="text_52">
+      <TextComponent name="text_52" plugin="None">
         <Param val="yellow" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2503,7 +2526,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="1000" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <PolygonComponent name="center_square_2">
+      <PolygonComponent name="center_square_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2530,7 +2553,7 @@
         <Param val="pix" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <TextComponent name="most_similar_4">
+      <TextComponent name="most_similar_4" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2555,7 +2578,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_different_4">
+      <TextComponent name="most_different_4" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2580,7 +2603,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_9">
+      <TextComponent name="Esc_exit_9" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2607,8 +2630,9 @@
       </TextComponent>
     </Routine>
     <Routine name="response_2">
-      <MouseComponent name="mouse_3">
+      <MouseComponent name="mouse_3" plugin="None">
         <Param val="response1disk,response3disk,response5disk,response7disk" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
@@ -2622,10 +2646,11 @@
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
-      <CodeComponent name="code_5">
+      <CodeComponent name="code_5" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -2642,7 +2667,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_5" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <ImageComponent name="response1disk_5">
+      <ImageComponent name="response1disk_5" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2669,7 +2694,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response3disk_5">
+      <ImageComponent name="response3disk_5" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2696,7 +2721,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response5disk_5">
+      <ImageComponent name="response5disk_5" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2723,7 +2748,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <ImageComponent name="response7disk_5">
+      <ImageComponent name="response7disk_5" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2750,7 +2775,7 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <TextComponent name="text_24">
+      <TextComponent name="text_24" plugin="None">
         <Param val="white" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2775,7 +2800,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_similar_5">
+      <TextComponent name="most_similar_5" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2800,7 +2825,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="most_different_5">
+      <TextComponent name="most_different_5" plugin="None">
         <Param val="yellow" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2825,7 +2850,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="Esc_exit_18">
+      <TextComponent name="Esc_exit_18" plugin="None">
         <Param val="aqua" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2850,7 +2875,7 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="enable_mouse_3">
+      <CodeComponent name="enable_mouse_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -2869,7 +2894,7 @@
       </CodeComponent>
     </Routine>
     <Routine name="Consent">
-      <TextComponent name="consent_text">
+      <TextComponent name="consent_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -2894,7 +2919,7 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ImageComponent name="monash_logo">
+      <ImageComponent name="monash_logo" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2921,7 +2946,7 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="pix" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <KeyboardComponent name="key_resp">
+      <KeyboardComponent name="key_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -2929,6 +2954,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>

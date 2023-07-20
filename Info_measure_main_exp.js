@@ -1,8 +1,8 @@
-/****************************** 
+﻿/****************************** 
  * Info_Measure_Main_Exp Test *
  ******************************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2022.2.4.js';
+import { core, data, sound, util, visual, hardware } from './lib/psychojs-2023.1.3.js';
 const { PsychoJS } = core;
 const { TrialHandler, MultiStairHandler } = data;
 const { Scheduler } = util;
@@ -100,44 +100,92 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'prac_patch/patch0002514.jpg', 'path': 'prac_patch/patch0002514.jpg'},
-    {'name': 'instructions/instruction_patch_1.mp4', 'path': 'instructions/instruction_patch_1.mp4'},
-    {'name': 'absent_patch/patch0002367.jpg', 'path': 'absent_patch/patch0002367.jpg'},
-    {'name': 'info_exp_patch_3_cond.xlsx', 'path': 'info_exp_patch_3_cond.xlsx'},
-    {'name': 'absent_patch/patch0002079.jpg', 'path': 'absent_patch/patch0002079.jpg'},
-    {'name': 'response45.png', 'path': 'response45.png'},
-    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
-    {'name': 'response01.png', 'path': 'response01.png'},
-    {'name': 'absent_patch/patch0002151.jpg', 'path': 'absent_patch/patch0002151.jpg'},
-    {'name': 'absent_patch/patch0001995.jpg', 'path': 'absent_patch/patch0001995.jpg'},
-    {'name': 'prac_patch/patch0002370.jpg', 'path': 'prac_patch/patch0002370.jpg'},
-    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
-    {'name': 'absent_patch/patch0002175.jpg', 'path': 'absent_patch/patch0002175.jpg'},
-    {'name': 'absent_patch/patch0002211.jpg', 'path': 'absent_patch/patch0002211.jpg'},
-    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
-    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    // resources:
     {'name': 'info_exp_prac_cond.xlsx', 'path': 'info_exp_prac_cond.xlsx'},
-    {'name': 'absent_patch/patch0002223.jpg', 'path': 'absent_patch/patch0002223.jpg'},
-    {'name': 'absent_patch/patch0002163.jpg', 'path': 'absent_patch/patch0002163.jpg'},
-    {'name': 'instructions/all_patches.png', 'path': 'instructions/all_patches.png'},
+    {'name': 'prac_patch/patch0002370.jpg', 'path': 'prac_patch/patch0002370.jpg'},
     {'name': 'prac_patch/patch0002406.jpg', 'path': 'prac_patch/patch0002406.jpg'},
-    {'name': 'response67.png', 'path': 'response67.png'},
+    {'name': 'prac_patch/patch0002514.jpg', 'path': 'prac_patch/patch0002514.jpg'},
     {'name': 'prac_patch/patch0002490.jpg', 'path': 'prac_patch/patch0002490.jpg'},
-    {'name': 'absent_patch/patch0002271.jpg', 'path': 'absent_patch/patch0002271.jpg'},
     {'name': 'prac_patch/patch0002526.jpg', 'path': 'prac_patch/patch0002526.jpg'},
-    {'name': 'present_patch/cong_131_3_a.jpg', 'path': 'present_patch/cong_131_3_a.jpg'},
-    {'name': 'response23.png', 'path': 'response23.png'},
-    {'name': 'absent_patch/patch0002031.jpg', 'path': 'absent_patch/patch0002031.jpg'},
-    {'name': 'instructions/response screen 2.png', 'path': 'instructions/response screen 2.png'},
-    {'name': 'absent_patch/patch0002283.jpg', 'path': 'absent_patch/patch0002283.jpg'},
-    {'name': 'absent_patch/patch0002043.jpg', 'path': 'absent_patch/patch0002043.jpg'},
-    {'name': 'Monash_University_logo.svg.png', 'path': 'Monash_University_logo.svg.png'},
-    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
     {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
-    {'name': 'instructions/instruction_patch_2.mp4', 'path': 'instructions/instruction_patch_2.mp4'},
-    {'name': 'absent_patch/patch0002247.jpg', 'path': 'absent_patch/patch0002247.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
+    {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'info_exp_patch_3_cond.xlsx', 'path': 'info_exp_patch_3_cond.xlsx'},
+    {'name': 'absent_patch/patch0002175.jpg', 'path': 'absent_patch/patch0002175.jpg'},
     {'name': 'absent_patch/patch0001947.jpg', 'path': 'absent_patch/patch0001947.jpg'},
-    {'name': 'instructions/response screen.png', 'path': 'instructions/response screen.png'}
+    {'name': 'absent_patch/patch0002271.jpg', 'path': 'absent_patch/patch0002271.jpg'},
+    {'name': 'present_patch/cong_131_3_a.jpg', 'path': 'present_patch/cong_131_3_a.jpg'},
+    {'name': 'absent_patch/patch0002031.jpg', 'path': 'absent_patch/patch0002031.jpg'},
+    {'name': 'absent_patch/patch0002367.jpg', 'path': 'absent_patch/patch0002367.jpg'},
+    {'name': 'absent_patch/patch0002223.jpg', 'path': 'absent_patch/patch0002223.jpg'},
+    {'name': 'absent_patch/patch0001995.jpg', 'path': 'absent_patch/patch0001995.jpg'},
+    {'name': 'absent_patch/patch0002043.jpg', 'path': 'absent_patch/patch0002043.jpg'},
+    {'name': 'absent_patch/patch0002283.jpg', 'path': 'absent_patch/patch0002283.jpg'},
+    {'name': 'absent_patch/patch0002211.jpg', 'path': 'absent_patch/patch0002211.jpg'},
+    {'name': 'absent_patch/patch0002151.jpg', 'path': 'absent_patch/patch0002151.jpg'},
+    {'name': 'absent_patch/patch0002163.jpg', 'path': 'absent_patch/patch0002163.jpg'},
+    {'name': 'absent_patch/patch0002079.jpg', 'path': 'absent_patch/patch0002079.jpg'},
+    {'name': 'absent_patch/patch0002247.jpg', 'path': 'absent_patch/patch0002247.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
+    {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
+    {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'info_exp_patch_3_cond.xlsx', 'path': 'info_exp_patch_3_cond.xlsx'},
+    {'name': 'absent_patch/patch0002175.jpg', 'path': 'absent_patch/patch0002175.jpg'},
+    {'name': 'absent_patch/patch0001947.jpg', 'path': 'absent_patch/patch0001947.jpg'},
+    {'name': 'absent_patch/patch0002271.jpg', 'path': 'absent_patch/patch0002271.jpg'},
+    {'name': 'present_patch/cong_131_3_a.jpg', 'path': 'present_patch/cong_131_3_a.jpg'},
+    {'name': 'absent_patch/patch0002031.jpg', 'path': 'absent_patch/patch0002031.jpg'},
+    {'name': 'absent_patch/patch0002367.jpg', 'path': 'absent_patch/patch0002367.jpg'},
+    {'name': 'absent_patch/patch0002223.jpg', 'path': 'absent_patch/patch0002223.jpg'},
+    {'name': 'absent_patch/patch0001995.jpg', 'path': 'absent_patch/patch0001995.jpg'},
+    {'name': 'absent_patch/patch0002043.jpg', 'path': 'absent_patch/patch0002043.jpg'},
+    {'name': 'absent_patch/patch0002283.jpg', 'path': 'absent_patch/patch0002283.jpg'},
+    {'name': 'absent_patch/patch0002211.jpg', 'path': 'absent_patch/patch0002211.jpg'},
+    {'name': 'absent_patch/patch0002151.jpg', 'path': 'absent_patch/patch0002151.jpg'},
+    {'name': 'absent_patch/patch0002163.jpg', 'path': 'absent_patch/patch0002163.jpg'},
+    {'name': 'absent_patch/patch0002079.jpg', 'path': 'absent_patch/patch0002079.jpg'},
+    {'name': 'absent_patch/patch0002247.jpg', 'path': 'absent_patch/patch0002247.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
+    {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'masks_cond.xlsx', 'path': 'masks_cond.xlsx'},
+    {'name': 'masks/mask_001.jpg', 'path': 'masks/mask_001.jpg'},
+    {'name': 'masks/mask_002.jpg', 'path': 'masks/mask_002.jpg'},
+    {'name': 'masks/mask_003.jpg', 'path': 'masks/mask_003.jpg'},
+    {'name': 'masks/mask_004.jpg', 'path': 'masks/mask_004.jpg'},
+    {'name': 'masks/mask_005.jpg', 'path': 'masks/mask_005.jpg'},
+    {'name': 'Monash_University_logo.svg.png', 'path': 'Monash_University_logo.svg.png'},
+    {'name': 'instructions/all_patches.png', 'path': 'instructions/all_patches.png'},
+    {'name': 'instructions/instruction_patch_1.mp4', 'path': 'instructions/instruction_patch_1.mp4'},
+    {'name': 'instructions/instruction_patch_2.mp4', 'path': 'instructions/instruction_patch_2.mp4'},
+    {'name': 'instructions/response screen.png', 'path': 'instructions/response screen.png'},
+    {'name': 'instructions/response screen 2.png', 'path': 'instructions/response screen 2.png'},
+    {'name': 'default.png', 'path': 'https://pavlovia.org/assets/default/default.png'},
+    {'name': 'response67.png', 'path': 'response67.png'},
+    {'name': 'response23.png', 'path': 'response23.png'},
+    {'name': 'response45.png', 'path': 'response45.png'},
+    {'name': 'response01.png', 'path': 'response01.png'},
   ]
 });
 
@@ -150,10 +198,9 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2022.2.4';
+  expInfo['psychopyVersion'] = '2023.1.3';
   expInfo['OS'] = window.navigator.platform;
 
-  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
 
   // store frame rate of monitor if we can measure it successfully
   expInfo['frameRate'] = psychoJS.window.getActualFrameRate();
@@ -165,6 +212,11 @@ async function updateInfo() {
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
   
+
+  
+  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+
+
   return Scheduler.Event.NEXT;
 }
 
@@ -194,11 +246,15 @@ var press_space_continue;
 var Esc_exit;
 var instruction_2Clock;
 var instruction_text_2;
+var patch_1_movieClock;
+var patch_1_movie;
 var space_press_continue_2;
 var press_space_continue_2;
 var Esc_exit_2;
 var instruction_3Clock;
 var instruction_text_3;
+var patch_2_movieClock;
+var patch_2_movie;
 var space_press_continue_3;
 var press_space_continue_3;
 var Esc_exit_3;
@@ -346,6 +402,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'monash_logo', units : 'pix', 
     image : 'Monash_University_logo.svg.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, (win_pix_y * 0.43)], size : [(win_pix_x * 0.09), (win_pix_y * 0.09)],
     color : new util.Color([1,1,1]), opacity : 1.0,
     flipHoriz : false, flipVert : false,
@@ -358,7 +415,7 @@ async function experimentInit() {
   instruction_1_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'instruction_1_text',
-    text: 'Welcome to our experiment!\n\nIn this experiment, you will see the following images, and will be asked to report how similar these images are to each other.  ',
+    text: 'Welcome to our experiment!\n\nIn this experiment, you will see the following images, focus on the perceptual aspects, you will be asked to report how similar these images are to each other.  ',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0.5], height: 0.06,  wrapWidth: undefined, ori: 0.0,
@@ -371,6 +428,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'all_patches', units : 'norm', 
     image : 'instructions/all_patches.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, (- 0.1)], size : [0.7, 0.75],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -416,6 +474,21 @@ async function experimentInit() {
     depth: 0.0 
   });
   
+  patch_1_movieClock = new util.Clock();
+  patch_1_movie = new visual.MovieStim({
+    win: psychoJS.window,
+    name: 'patch_1_movie',
+    units: 'norm',
+    movie: undefined,
+    pos: [0, (- 0.1)],
+    anchor: 'center',
+    size: [0.5, 0.68],
+    ori: 0.0,
+    opacity: 1.0,
+    loop: true,
+    noAudio: false,
+    depth: -1
+    });
   space_press_continue_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   press_space_continue_2 = new visual.TextStim({
@@ -456,6 +529,21 @@ async function experimentInit() {
     depth: 0.0 
   });
   
+  patch_2_movieClock = new util.Clock();
+  patch_2_movie = new visual.MovieStim({
+    win: psychoJS.window,
+    name: 'patch_2_movie',
+    units: 'norm',
+    movie: undefined,
+    pos: [0, (- 0.1)],
+    anchor: 'center',
+    size: [0.5, 0.68],
+    ori: 0.0,
+    opacity: 1.0,
+    loop: true,
+    noAudio: false,
+    depth: -1
+    });
   space_press_continue_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   press_space_continue_3 = new visual.TextStim({
@@ -487,7 +575,7 @@ async function experimentInit() {
   instruction_text_4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instruction_text_4',
-    text: 'Finally, a response screen will appear. You are asked to rate how similar the two images you just saw are to each other, by choosing one of the numbers on the response screen.\n\n0 =>  most similar\n7 => most different',
+    text: 'Finally, a response screen will appear. You are asked to rate how similar the two images you just saw are to each other in perceptual aspects by choosing one of the numbers on the response screen.\n\n0 =>  most similar\n7 => most different',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0.65], height: 0.06,  wrapWidth: undefined, ori: 0.0,
@@ -512,6 +600,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response_screen_intr', units : 'height', 
     image : 'instructions/response screen.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, (- 0.15)], size : [0.4, 0.4],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -561,6 +650,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response_screen_after', units : 'height', 
     image : 'instructions/response screen 2.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, (- 0.1)], size : [0.4, 0.4],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -638,6 +728,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'fixation_cross', units : 'pix', 
     vertices: 'cross', size:[30, 30],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('white'),
@@ -648,7 +739,8 @@ async function experimentInit() {
   practice_patch_1 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'practice_patch_1', units : 'pix', 
-    image : undefined, mask : undefined,
+    image : 'default.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [((win_pix_y * 0.75) / 3), ((win_pix_y * 0.75) / 3)],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -671,7 +763,8 @@ async function experimentInit() {
   mask_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'mask_image', units : 'pix', 
-    image : undefined, mask : undefined,
+    image : 'default.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [((win_pix_y * 0.75) / 3), ((win_pix_y * 0.75) / 3)],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -695,6 +788,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'fixation_cross_3', units : 'pix', 
     vertices: 'cross', size:[30, 30],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('white'),
@@ -705,7 +799,8 @@ async function experimentInit() {
   practice_patch_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'practice_patch_2', units : 'pix', 
-    image : undefined, mask : undefined,
+    image : 'default.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [((win_pix_y * 0.75) / 3), ((win_pix_y * 0.75) / 3)],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -733,6 +828,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response1disk_3', units : 'pix', 
     image : 'response67.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -742,6 +838,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response5disk_3', units : 'pix', 
     image : 'response23.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -751,6 +848,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response3disk_3', units : 'pix', 
     image : 'response45.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -760,6 +858,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response7disk_3', units : 'pix', 
     image : 'response01.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -861,6 +960,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response1disk_4', units : 'pix', 
     image : 'response67.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -870,6 +970,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response3disk_4', units : 'pix', 
     image : 'response45.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -879,6 +980,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response5disk_4', units : 'pix', 
     image : 'response23.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -888,6 +990,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response7disk_4', units : 'pix', 
     image : 'response01.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -909,6 +1012,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'center_square_2', units : 'pix', 
     width: [((win_pix_y * 0.75) / 20), ((win_pix_y * 0.75) / 20)][0], height: [((win_pix_y * 0.75) / 20), ((win_pix_y * 0.75) / 20)][1],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('yellow'),
@@ -990,6 +1094,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'fixation_cross_1', units : 'pix', 
     vertices: 'cross', size:[30, 30],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('white'),
@@ -1000,7 +1105,8 @@ async function experimentInit() {
   first_patch = new visual.ImageStim({
     win : psychoJS.window,
     name : 'first_patch', units : 'pix', 
-    image : undefined, mask : undefined,
+    image : 'default.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [((win_pix_y * 0.75) / 3), ((win_pix_y * 0.75) / 3)],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -1024,6 +1130,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'fixation_cross_2', units : 'pix', 
     vertices: 'cross', size:[30, 30],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('white'),
@@ -1034,7 +1141,8 @@ async function experimentInit() {
   second_patch = new visual.ImageStim({
     win : psychoJS.window,
     name : 'second_patch', units : 'pix', 
-    image : undefined, mask : undefined,
+    image : 'default.png', mask : undefined,
+    anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [((win_pix_y * 0.75) / 3), ((win_pix_y * 0.75) / 3)],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
@@ -1062,6 +1170,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response1disk', units : 'pix', 
     image : 'response67.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1071,6 +1180,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response3disk', units : 'pix', 
     image : 'response45.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1080,6 +1190,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response5disk', units : 'pix', 
     image : 'response23.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1089,6 +1200,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response7disk', units : 'pix', 
     image : 'response01.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1152,6 +1264,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response1disk_2', units : 'pix', 
     image : 'response67.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1161,6 +1274,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response3disk_2', units : 'pix', 
     image : 'response45.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1170,6 +1284,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response5disk_2', units : 'pix', 
     image : 'response23.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1179,6 +1294,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response7disk_2', units : 'pix', 
     image : 'response01.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1200,6 +1316,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'center_square', units : 'pix', 
     width: [((win_pix_y * 0.75) / 20), ((win_pix_y * 0.75) / 20)][0], height: [((win_pix_y * 0.75) / 20), ((win_pix_y * 0.75) / 20)][1],
     ori: 0.0, pos: [0, 0],
+    anchor: 'center',
     lineWidth: 1.0, 
     colorSpace: 'rgb',
     lineColor: new util.Color('yellow'),
@@ -1265,6 +1382,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response1disk_5', units : 'pix', 
     image : 'response67.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1274,6 +1392,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response3disk_5', units : 'pix', 
     image : 'response45.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1283,6 +1402,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response5disk_5', units : 'pix', 
     image : 'response23.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1292,6 +1412,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'response7disk_5', units : 'pix', 
     image : 'response01.png', mask : undefined,
+    anchor : 'center',
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1599,6 +1720,7 @@ function ConsentRoutineEachFrame() {
       if (_key_resp_allKeys.length > 0) {
         key_resp.keys = _key_resp_allKeys[_key_resp_allKeys.length - 1].name;  // just the last key pressed
         key_resp.rt = _key_resp_allKeys[_key_resp_allKeys.length - 1].rt;
+        key_resp.duration = _key_resp_allKeys[_key_resp_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -1646,6 +1768,7 @@ function ConsentRoutineEnd(snapshot) {
     psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
     if (typeof key_resp.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
+        psychoJS.experiment.addData('key_resp.duration', key_resp.duration);
         routineTimer.reset();
         }
     
@@ -1739,6 +1862,7 @@ function instruction_1RoutineEachFrame() {
       if (_space_press_continue_allKeys.length > 0) {
         space_press_continue.keys = _space_press_continue_allKeys[_space_press_continue_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue.rt = _space_press_continue_allKeys[_space_press_continue_allKeys.length - 1].rt;
+        space_press_continue.duration = _space_press_continue_allKeys[_space_press_continue_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -1806,6 +1930,7 @@ function instruction_1RoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue.keys', space_press_continue.keys);
     if (typeof space_press_continue.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue.rt', space_press_continue.rt);
+        psychoJS.experiment.addData('space_press_continue.duration', space_press_continue.duration);
         routineTimer.reset();
         }
     
@@ -1822,8 +1947,6 @@ function instruction_1RoutineEnd(snapshot) {
 }
 
 
-var patch_1_movieClock;
-var patch_1_movie;
 var _space_press_continue_2_allKeys;
 var instruction_2Components;
 function instruction_2RoutineBegin(snapshot) {
@@ -1836,19 +1959,7 @@ function instruction_2RoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    patch_1_movieClock = new util.Clock();
-    patch_1_movie = new visual.MovieStim({
-      win: psychoJS.window,
-      name: 'patch_1_movie',
-      units: 'norm',
-      movie: 'instructions/instruction_patch_1.mp4',
-      pos: [0, (- 0.1)],
-      size: [0.5, 0.68],
-      ori: 0.0,
-      opacity: 1.0,
-      loop: true,
-      noAudio: false,
-      });
+    patch_1_movie.setMovie('instructions/instruction_patch_1.mp4');
     space_press_continue_2.keys = undefined;
     space_press_continue_2.rt = undefined;
     _space_press_continue_2_allKeys = [];
@@ -1915,6 +2026,7 @@ function instruction_2RoutineEachFrame() {
       if (_space_press_continue_2_allKeys.length > 0) {
         space_press_continue_2.keys = _space_press_continue_2_allKeys[_space_press_continue_2_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_2.rt = _space_press_continue_2_allKeys[_space_press_continue_2_allKeys.length - 1].rt;
+        space_press_continue_2.duration = _space_press_continue_2_allKeys[_space_press_continue_2_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -1983,6 +2095,7 @@ function instruction_2RoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_2.keys', space_press_continue_2.keys);
     if (typeof space_press_continue_2.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_2.rt', space_press_continue_2.rt);
+        psychoJS.experiment.addData('space_press_continue_2.duration', space_press_continue_2.duration);
         routineTimer.reset();
         }
     
@@ -1999,8 +2112,6 @@ function instruction_2RoutineEnd(snapshot) {
 }
 
 
-var patch_2_movieClock;
-var patch_2_movie;
 var _space_press_continue_3_allKeys;
 var instruction_3Components;
 function instruction_3RoutineBegin(snapshot) {
@@ -2013,19 +2124,7 @@ function instruction_3RoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    patch_2_movieClock = new util.Clock();
-    patch_2_movie = new visual.MovieStim({
-      win: psychoJS.window,
-      name: 'patch_2_movie',
-      units: 'norm',
-      movie: 'instructions/instruction_patch_2.mp4',
-      pos: [0, (- 0.1)],
-      size: [0.5, 0.68],
-      ori: 0.0,
-      opacity: 1.0,
-      loop: true,
-      noAudio: false,
-      });
+    patch_2_movie.setMovie('instructions/instruction_patch_2.mp4');
     space_press_continue_3.keys = undefined;
     space_press_continue_3.rt = undefined;
     _space_press_continue_3_allKeys = [];
@@ -2092,6 +2191,7 @@ function instruction_3RoutineEachFrame() {
       if (_space_press_continue_3_allKeys.length > 0) {
         space_press_continue_3.keys = _space_press_continue_3_allKeys[_space_press_continue_3_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_3.rt = _space_press_continue_3_allKeys[_space_press_continue_3_allKeys.length - 1].rt;
+        space_press_continue_3.duration = _space_press_continue_3_allKeys[_space_press_continue_3_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -2160,6 +2260,7 @@ function instruction_3RoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_3.keys', space_press_continue_3.keys);
     if (typeof space_press_continue_3.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_3.rt', space_press_continue_3.rt);
+        psychoJS.experiment.addData('space_press_continue_3.duration', space_press_continue_3.duration);
         routineTimer.reset();
         }
     
@@ -2264,6 +2365,7 @@ function instruction_4RoutineEachFrame() {
       if (_space_press_continue_4_allKeys.length > 0) {
         space_press_continue_4.keys = _space_press_continue_4_allKeys[_space_press_continue_4_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_4.rt = _space_press_continue_4_allKeys[_space_press_continue_4_allKeys.length - 1].rt;
+        space_press_continue_4.duration = _space_press_continue_4_allKeys[_space_press_continue_4_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -2331,6 +2433,7 @@ function instruction_4RoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_4.keys', space_press_continue_4.keys);
     if (typeof space_press_continue_4.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_4.rt', space_press_continue_4.rt);
+        psychoJS.experiment.addData('space_press_continue_4.duration', space_press_continue_4.duration);
         routineTimer.reset();
         }
     
@@ -2424,6 +2527,7 @@ function instruction_5RoutineEachFrame() {
       if (_space_press_continue_5_allKeys.length > 0) {
         space_press_continue_5.keys = _space_press_continue_5_allKeys[_space_press_continue_5_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_5.rt = _space_press_continue_5_allKeys[_space_press_continue_5_allKeys.length - 1].rt;
+        space_press_continue_5.duration = _space_press_continue_5_allKeys[_space_press_continue_5_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -2491,6 +2595,7 @@ function instruction_5RoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_5.keys', space_press_continue_5.keys);
     if (typeof space_press_continue_5.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_5.rt', space_press_continue_5.rt);
+        psychoJS.experiment.addData('space_press_continue_5.duration', space_press_continue_5.duration);
         routineTimer.reset();
         }
     
@@ -2583,6 +2688,7 @@ function begin_practiceRoutineEachFrame() {
       if (_space_press_continue_6_allKeys.length > 0) {
         space_press_continue_6.keys = _space_press_continue_6_allKeys[_space_press_continue_6_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_6.rt = _space_press_continue_6_allKeys[_space_press_continue_6_allKeys.length - 1].rt;
+        space_press_continue_6.duration = _space_press_continue_6_allKeys[_space_press_continue_6_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -2640,6 +2746,7 @@ function begin_practiceRoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_6.keys', space_press_continue_6.keys);
     if (typeof space_press_continue_6.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_6.rt', space_press_continue_6.rt);
+        psychoJS.experiment.addData('space_press_continue_6.duration', space_press_continue_6.duration);
         routineTimer.reset();
         }
     
@@ -3703,7 +3810,7 @@ function prac_responseRoutineEachFrame() {
               mouse_2.clicked_name.push(obj.name)
             }
           }
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -4240,7 +4347,7 @@ function prac_correct_mouseRoutineEachFrame() {
               mouse_12.clicked_name.push(obj.name)
             }
           }
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -4470,7 +4577,7 @@ function begin_taskRoutineEachFrame() {
           mouse_1.midButton.push(_mouseButtons[1]);
           mouse_1.rightButton.push(_mouseButtons[2]);
           mouse_1.time.push(mouse_1.mouseClock.getTime());
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -4515,6 +4622,7 @@ function begin_taskRoutineEachFrame() {
       if (_space_press_continue_7_allKeys.length > 0) {
         space_press_continue_7.keys = _space_press_continue_7_allKeys[_space_press_continue_7_allKeys.length - 1].name;  // just the last key pressed
         space_press_continue_7.rt = _space_press_continue_7_allKeys[_space_press_continue_7_allKeys.length - 1].rt;
+        space_press_continue_7.duration = _space_press_continue_7_allKeys[_space_press_continue_7_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -4571,6 +4679,7 @@ function begin_taskRoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_press_continue_7.keys', space_press_continue_7.keys);
     if (typeof space_press_continue_7.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_press_continue_7.rt', space_press_continue_7.rt);
+        psychoJS.experiment.addData('space_press_continue_7.duration', space_press_continue_7.duration);
         routineTimer.reset();
         }
     
@@ -4910,7 +5019,7 @@ function responseRoutineEachFrame() {
               mouse.clicked_name.push(obj.name)
             }
           }
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -5231,7 +5340,7 @@ function correct_mouseRoutineEachFrame() {
               mouse_11.clicked_name.push(obj.name)
             }
           }
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -5466,7 +5575,7 @@ function response_2RoutineEachFrame() {
               mouse_3.clicked_name.push(obj.name)
             }
           }
-          if (gotValidClick === true) { // abort routine on response
+          if (gotValidClick === true) { // end routine on response
             continueRoutine = false;
           }
         }
@@ -5784,6 +5893,7 @@ function end_of_experimentRoutineEachFrame() {
       if (_space_exit_allKeys.length > 0) {
         space_exit.keys = _space_exit_allKeys[_space_exit_allKeys.length - 1].name;  // just the last key pressed
         space_exit.rt = _space_exit_allKeys[_space_exit_allKeys.length - 1].rt;
+        space_exit.duration = _space_exit_allKeys[_space_exit_allKeys.length - 1].duration;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -5831,6 +5941,7 @@ function end_of_experimentRoutineEnd(snapshot) {
     psychoJS.experiment.addData('space_exit.keys', space_exit.keys);
     if (typeof space_exit.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('space_exit.rt', space_exit.rt);
+        psychoJS.experiment.addData('space_exit.duration', space_exit.duration);
         routineTimer.reset();
         }
     
